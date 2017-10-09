@@ -1,0 +1,216 @@
+<html>
+	<head>
+		<script>
+			var categories = ["pessoal", "util", "dev", "pirate", "fun", "shop", "resource", "santander"];
+			var items = [
+				[["https://inbox.google.com", "Inbox"],
+				 ["https://feedly.com", "Feedly"],
+				 ["./SoleilBypass.html", "Soleil"],
+				 ["https://keep.google.com", "Keep"],
+				 ["https://calendar.google.com", "Calendar"],
+				 ["https://drive.google.com/drive/my-drive", "Drive"],
+				 ["https://gmail.com", "GMail"],
+				 ["http://www.condominioalamedamorumbi.com.br/", "Alameda Morumbi"],
+				 ["https://alelo.com.br/consulta-saldo-extrato-alelo.html", "Alelo"]],
+				 
+				 [["https://www.nescafe-dolcegusto.com.br/PT/Pages/Home.aspx", "Dolcegusto"],
+				  ["https://web.whatsapp.com", "WhatsApp"],
+				  ["https://www.google.com.br/maps", "Google Maps"],
+				  ["http://alternativeto.net/", "Alternative To"],
+				  ["https://translate.google.com/", "Google Translate"],
+				  ["https://amil.com.br/portal/web/beneficiario/home", "Amil"],
+				  ["http://legendas.tv/", "Legendas TV"],
+				  ["https://www.box.com/", "Box"]],
+				 
+				 [["https://play.google.com/apps/publish/?dev_acc=11504768826300037415#AppListPlace", "Android Developer Console"],
+				  ["https://hackerrankdomination.slack.com", "Slack - HackerRank Domination"],
+				  ["https://natarquia.slack.com", "Slack - Natarquia"],
+				  ["https://www.pushwatch.com/gcm/", "Test GCM push"],
+				  ["https://jsonlint.com/", "JSON Lint"],
+				  ["https://www.draw.io/", "Draw IO"],
+				  ["https://material.io/guidelines/style/color.html", "Material colors"],
+				  ["./commit_msg_gen.html", "Commit message generator"],
+				  ["https://bitbucket.org", "Bitbucket"]],
+				 
+				 [["https://thepiratebay-proxylist.org/", "PirateBay proxies"],
+				  ["http://torrentoon.com/desenhos-genero-classico-2", "Cartoons cl&aacute;ssicos"],
+				  ["http://www.comandofilmes.net/barbie-aventura-nas-estrelas-2016-blu-ray-720p-1080p-dublado-torrent-download", "Barbie Aventura nas Estrelas"]],
+				 
+				 [["http://127.0.0.1:32400/web/index.html#", "Plex"],
+				 ["https://www.youtube.com/", "YouTube"]],
+				 
+				 [["https://pt.aliexpress.com/", "Ali Express"],
+				  ["http://dhgate.com", "DH Gate"],
+				  ["https://www.amazon.com.br/", "Amazon BR"],
+				  ["https://www.amazon.com/", "Amazon USA"],
+				  ["https://www.wish.com", "Wish"]],
+				 
+				 [["https://webmail.resource.com.br/owa", "Webmail"],
+				  ["https://RE033032:f-c-8690@webponto.resource.com.br/", "Marca&ccedil;&atilde;o de ponto"]],
+				 
+				 [["https://jira.ci.gsnet.corp", "JIRA"],
+				  ["https://confluence.ci.gsnet.corp", "Confluence"],
+				  ["https://gitlab.produbanbr.corp", "GitLab"],
+				  ["http://180.128.205.233/pithos/", "Cerberon"],
+				  ["http://gscbrasilpr01.bs.br.bsch:8082/arsys/shared/login.jsp?/arsys/home", "Remedy"],
+				  ["https://owa.santander.com.br/", "Webmail"],
+				  ["http://santander.zenvia360.com.br/report/page/desktop.jsf", "Zenvia"],
+				  ["http://jenkins.produbanbr.corp/", "Jenkins"],
+				  ["https://clm.santanderbr.corp/jenkins/", "Jenkins (legado)"],
+				  ["http://nexus.produbanbr.corp/", "Nexus"],
+				  ["https://esbapimanageradm.isbanbr.dev.corp", "ZUP API"],
+				  ["http://d2053768.bs.br.bsch:9060/ibm/console/login.do", "Websphere Fernando"],
+				  ["https://srvmsgdvwbr01:9043/ibm/console/logon.jsp", "Websphere DEV"],
+				  ["http://srvmsghvwbr02:9080/logview/listlogs.jsp?logfolder=APP_MSG_NDwas01App01&profile=AppSrv01", "LOGs HK"],
+				  ["https://owa.santander.com.br/owa/redir.aspx?C=_2bkRBMsdtutFW0c2PWHm07FQVKDZGs8ccnr9D-0Vh2ycjkkHQTVCA..&URL=http%3a%2f%2fsrvmsgpvwbr02%3a9080%2flogview%2flistlogfolders.jsp%3fprofile%3dAppSrv01", "LOGs PRD"],
+				  ["http://bdelsplbnsbr010.bs.br.bsch:5601/app/kibana#/discover?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(_source),filters:!(),index:openbus_search_br,interval:auto,query:(query_string:(analyze_wildcard:!t,query:'tool:MSG')),sort:!(timestamp,desc)", "Kibana MSG"],
+				  ["http://bdelsplbnsbr010.bs.br.bsch:5601/app/kibana#/discover?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(_source),filters:!(),index:openbus_search_br,interval:auto,query:(query_string:(analyze_wildcard:!t,query:'tool:MSGADESAO')),sort:!(timestamp", "Kibana MSGADESAO"],
+				  ["http://srvbdrpvlbr08.santanderbr.corp:8080/#/discover/MSG_PUSHS_ENVIADOS?_a=(columns:!(_api.name,_clientApplication.name,_entrypoint.name,_resource.endpoint.url,_resource.name,entries.endpoint.request.postData.text),filters:!(),index:'events-santander-2017*',interval:m,query:(query_string:(analyze_wildcard:!t,query:'_api.name:%20Push%20AND%20_resource.name:%20Notifications')),sort:!(entries.entrypoint.startedDateTime,desc))&_g=(refreshInterval:(display:Off,pause:!f,section:0,value:0),time:(from:now-4h,mode:quick,to:now))", "Kibana ZUP"],
+				  ["./MP_msg_gen.html", "MP event generator"]]
+				 ];
+		</script>
+		<title>Myndex</title>
+		<style>
+			body {
+				font-family: Arial;
+				background: #303f9f;
+			}
+			
+			a {
+				color: #fff;
+				text-decoration: none;
+				font-size: 1.3em;
+				font-weight: bold;
+			}
+			
+			a:hover, a:active {
+				color: #303f9f;
+				text-decoration: none;
+				font-size: 1.3em;
+				font-weight: bold;
+			}
+			
+			.title {
+				font-size: 1.5em;
+				font-weight: bold;
+				color: #ffffff;
+			}
+			
+			.seltitle {
+				font-size: 1.5em;
+				font-weight: bold;
+				color: #303f9f;
+				background-color: #dddddd;
+			}
+			
+			.menu {
+				float: left;
+				width: 10%;
+				height: 95%;
+			}
+			
+			.content {
+				float: left;
+				width: 90%;
+				height: 95%;
+			}
+			
+			.cpanel {
+				position: relative;
+			}
+			
+			.bookmark {
+				display: inline-block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+			}
+			
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #303f9f;
+			}
+			
+			li {
+				float: left;
+			}
+			
+			li a {
+				display: inline-block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			
+			li a:hover {
+				background-color: #dddddd;
+			}
+		</style>
+		<script>
+			function buildUp() {
+				var stinner = "";
+				for (var c=0; c < categories.length; c++) {
+					stinner += "<div id=\"c" + categories[c] + "\" class=\"cpanel\">\n";
+					stinner += "<ul>\n";
+					
+					var cis = items[c];
+					for (var i=0; i < cis.length; i++) {
+						var link = cis[i][0];
+						var desc = cis[i][1];
+						stinner += "<li><a href=\"" + link + "\" target=\"_blank\">" + desc + "</a></li>\n";
+					}
+					
+					stinner += "</ul>\n";
+					stinner += "</div>\n\n";
+				}
+				document.getElementById("content").innerHTML = stinner;
+			}
+			
+			function initialState() {
+				var stinner = "";
+				
+				for (var i=0; i < categories.length; i++) {
+					var title = categories[i];
+					var utitle = title.charAt(0).toUpperCase() + title.slice(1);
+					stinner += "<p id=\"m" + title + "\"  class=\"title\" onMouseOver=\"activate(" + i + ");\">" + utitle + "</p>\n"
+				}
+			
+				document.getElementById("menu").innerHTML = stinner;
+			
+				activate(0);
+			}
+		
+			function activate(idx) {
+				var mitem = "m" + categories[idx];
+				var citem = "c" + categories[idx];
+				
+				document.getElementById(mitem).className = 'seltitle';
+				document.getElementById(citem).style.display = 'block';
+				
+				for (var i=0; i < categories.length; i++) { if (i != idx) { deactivate(i); } }
+			}
+			
+			function deactivate(idx) {
+				document.getElementById("m" + categories[idx]).className = 'title';
+				document.getElementById("c" + categories[idx]).style.display = 'none';
+			}
+			
+			function showHide(el) {
+				var x = document.getElementById(el);
+				if (x.style.display === 'none') {
+					x.style.display = 'block';
+				} else {
+					x.style.display = 'none';
+				}
+			}
+		</script>
+	</head>
+	<body onLoad="buildUp(); initialState();">
+		<div id="menu" class="menu"></div>
+		<div id="content" class="content"></div>
+	</body>
+</html>
